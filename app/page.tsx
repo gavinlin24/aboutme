@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Navbar from "../components/Navbar"
 import { Playfair_Display } from 'next/font/google';
 
 const playfair = Playfair_Display({ subsets: ['latin'] });
@@ -6,25 +7,7 @@ const playfair = Playfair_Display({ subsets: ['latin'] });
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-emerald-50 to-amber-50">
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/70 backdrop-blur-md border-b border-emerald-100 z-50">
-        <div className="px-12 py-4 flex items-center justify-between">
-          <div className="text-xl font-bold text-emerald-600">
-            Gavin Lin
-          </div>
-          <div className="flex gap-8">
-            <button className="text-slate-600 hover:text-emerald-600 transition-colors font-medium">
-              About
-            </button>
-            <button className="text-slate-600 hover:text-emerald-600 transition-colors font-medium">
-              Projects
-            </button>
-            <button className="text-slate-600 hover:text-emerald-600 transition-colors font-medium">
-              Contact
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-6 pt-60 pb-20">
