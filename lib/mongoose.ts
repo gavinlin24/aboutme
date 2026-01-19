@@ -33,6 +33,10 @@ export async function connectToDatabase() {
   }
 
   if (!cached.promise) {
+    if (!MONGODB_URI) {
+      throw new Error("DATABASE_URL is not defined");
+    }
+
     cached.promise = mongoose.connect(MONGODB_URI, {
       bufferCommands: false,
     });
